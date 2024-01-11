@@ -59,7 +59,7 @@ main {
     let concat = "Hello, " ++ "World"
     println(concat) // Hello, World
 
-    println("e" in "Hello") // true
+    println("e" ∊ "Hello") // true
 
     if true {
         println("Hi from inside an if statement")

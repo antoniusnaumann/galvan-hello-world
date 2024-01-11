@@ -102,14 +102,14 @@ dependencies = [
 
 [[package]]
 name = "galvan"
-version = "0.0.0-dev06"
+version = "0.0.0-dev08"
 dependencies = [
  "galvan-transpiler",
 ]
 
 [[package]]
 name = "galvan-ast"
-version = "0.0.0-dev06"
+version = "0.0.0-dev08"
 dependencies = [
  "derive_more",
  "from-pest",
@@ -124,7 +124,7 @@ dependencies = [
 
 [[package]]
 name = "galvan-files"
-version = "0.0.0-dev06"
+version = "0.0.0-dev08"
 dependencies = [
  "thiserror",
  "walkdir",
@@ -132,7 +132,7 @@ dependencies = [
 
 [[package]]
 name = "galvan-pest"
-version = "0.0.0-dev06"
+version = "0.0.0-dev08"
 dependencies = [
  "galvan-files",
  "pest",
@@ -141,7 +141,7 @@ dependencies = [
 
 [[package]]
 name = "galvan-resolver"
-version = "0.0.0-dev06"
+version = "0.0.0-dev08"
 dependencies = [
  "galvan-ast",
  "thiserror",
@@ -149,7 +149,7 @@ dependencies = [
 
 [[package]]
 name = "galvan-transpiler"
-version = "0.0.0-dev06"
+version = "0.0.0-dev08"
 dependencies = [
  "convert_case 0.6.0",
  "derive_more",

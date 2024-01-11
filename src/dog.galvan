@@ -10,3 +10,9 @@ fn woof(self: Dog) {
 fn happy_birthday(mut self: Dog) {
     self.age += 1
 }
+
+test {
+    let dog = Dog(name: "Rex", age: 3)
+
+    assert dog.name.to_uppercase() == "REX"
+}

@@ -17,3 +17,17 @@ test {
 }
 
 test { }
+
+test "Create Vector" {
+    let v = [1, 2, 3]
+
+    assert v.len() == 3 //, "Vector length should be 3"
+}
+
+test "Create dictionary" {
+    let d = { "a": 1, "b": 2 }
+
+    let option = if true { 1 }
+    // assert d.get("a") == option
+    assert true
+}

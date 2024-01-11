@@ -17,3 +17,10 @@ test {
     let identity = identity(x) == 42;
     assert identity //, "Identity function should return the same value";
 }
+
+test "Closures have correct types in Rust" {
+    let nums = [1, 2, 3]
+    let squares: [I64] = nums.into_iter().map(|x: I64| { x ^ 2 }).collect()
+
+    assert squares == [1, 4, 9]
+}
