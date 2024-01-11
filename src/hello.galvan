@@ -1,0 +1,19 @@
+fn greet(name: String) {
+    let greeting = "Hello"
+    println("{greeting}, {name}!")
+}
+
+test "Run greeter function" {
+    greet("Rust")
+}
+
+test "Run greeter function" {
+    greet("World")
+}
+
+test {
+    let name = "Rust"
+    greet(name)
+}
+
+test { }

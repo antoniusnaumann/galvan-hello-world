@@ -1,0 +1,19 @@
+fn enlighten(mut x: Int) {
+    x = 42
+}
+
+fn square(mut x: Int) {
+    x ^= 2
+}
+
+fn identity(x: Int) -> Int {
+    x
+}
+
+test {
+    mut x = 0;
+    enlighten(mut x);
+    assert x == 42;
+    let identity = identity(x) == 42;
+    assert identity //, "Identity function should return the same value";
+}

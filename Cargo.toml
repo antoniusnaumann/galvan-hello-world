@@ -1,0 +1,11 @@
+[package]
+name = "hello-world"
+version = "0.0.0"
+
+[dependencies]
+galvan = { path = "..", version = "0.0.0-dev07" }
+
+[build-dependencies]
+galvan = { path = "..", version = "0.0.0-dev07", features = ["build"]}
+
+[workspace]

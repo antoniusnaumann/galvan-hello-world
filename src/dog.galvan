@@ -1,0 +1,12 @@
+type Dog {
+    name: String
+    age: Int
+}
+
+fn woof(self: Dog) {
+    println("woof!")
+}
+
+fn happy_birthday(mut self: Dog) {
+    self.age += 1
+}

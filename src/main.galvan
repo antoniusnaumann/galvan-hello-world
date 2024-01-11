@@ -1,0 +1,106 @@
+main {
+    // see hello.galvan
+    greet("Galvan") // Hello, Galvan!
+
+    // see numbers.galvan
+    mut x: I64 = 0
+    enlighten(mut x)
+    println x // 42
+
+    mut y = 2
+    println y // 2
+    square(mut y)
+    println y // 4
+    // identity(y)
+
+    mut t = 5
+    t = 7
+
+    let z = y
+    println y  // 4
+    println z // 4
+
+    hi()
+
+    // see dog.galvan
+    mut dog = Dog(name: "Rex", age: 3)
+    dog.woof()
+    dog.happy_birthday()
+    println(dog.age)
+
+    dog = Dog(name: "Hasso", age: 4)
+    println(dog.name)
+    dog.age = 5
+
+    // TODO: Wrap this in Arc::new(Mutex::new)) in transpile output
+    // TODO: Create a galvan::Ref<T> trait that has a Ref::clone_into method that accepts both &T and Ref<T>
+    ref other_dog = Dog(name: "Fido", age: 5)
+    ref still_fido = other_dog
+    // println(still_fido.name) // "Fido"
+
+    let a = x + y
+    println(a) // 46
+
+    let b = x - y
+    println(b) // 38
+
+    let c = x + 3i64 ^ 2
+    println(c) // 51
+
+    let d = 3_i64 ^ 2 + x
+    println(d) // 51
+
+    let truth = true
+    println(truth) // true
+
+    let logic = truth and false
+    println(logic) // false
+
+    let concat = "Hello, " ++ "World"
+    println(concat) // Hello, World
+
+    println("e" in "Hello") // true
+
+    if true {
+        println("Hi from inside an if statement")
+    } else {
+      println("THIS SHOULD NEVER BE PRINTED")
+    }
+
+    let optional = if 5 == 5 { "This is an optional" }
+    debug(optional) // Some("This is an optional")
+    try optional |some: String| {
+        println some
+
+        let c = some.chars()
+        c.for_each(|c: Char| {
+            print c
+            print " "
+        })
+        println ""
+    } else {
+        println "THIS SHOULD NEVER BE PRINTED"
+    }
+
+    let optional = if 5 == 6 { "This is an optional" }
+    debug(optional) // None
+
+    let the_else = if 5 == 6 { "THIS SHOULD NEVER BE PRINTED" } else { "This is the else" }
+    println(the_else) // This is the else
+
+    if false {
+        println "THIS SHOULD NEVER BE PRINTED"
+    } else {
+        println "Hi from inside an else statement"
+        println the_else
+        debug other_dog
+        debug dog
+        dog.woof()
+        dog.happy_birthday()
+        debug dog
+    }
+}
+
+fn hi() {
+    println("hi")
+}
