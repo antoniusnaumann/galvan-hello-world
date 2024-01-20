@@ -75,7 +75,7 @@ main {
         let c = some.chars()
         c.for_each(|c: Char| {
             print c
-            print " "
+            print ""
         })
         println ""
     } else {

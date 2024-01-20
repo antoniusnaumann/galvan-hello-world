@@ -14,8 +14,11 @@ test {
     mut x = 0;
     enlighten(mut x);
     assert x == 42;
-    let identity = identity(x) == 42;
-    assert identity //, "Identity function should return the same value";
+    let i = identity(x) == 42;
+    assert i //, "Identity function should return the same value";
+
+    let i = identity(20)
+    assert i == 20
 }
 
 test "Closures have correct types in Rust" {
